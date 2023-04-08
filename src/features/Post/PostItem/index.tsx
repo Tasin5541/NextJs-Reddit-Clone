@@ -81,7 +81,7 @@ const PostItem: FC<PostItemContentProps> = ({ post, postIdx, onVote, onSelectPos
           onClick={(event) => onVote(event, post, -1, post.communityId)}
         />
       </Flex>
-      <Flex direction="column" width="100%">
+      <Flex direction="column" flexGrow={1}>
         <Stack spacing={1} p="10px 10px">
           {post.createdAt && (
             <Stack direction="row" spacing={0.6} align="center" fontSize="9pt">
@@ -107,7 +107,11 @@ const PostItem: FC<PostItemContentProps> = ({ post, postIdx, onVote, onSelectPos
             {post.title}
           </Text>
           <Text fontSize="10pt">{post.body}</Text>
-          {post.link ? <Microlink style={{ width: "100%" }} url={post.link} /> : null}
+          {post.link ? (
+            <Flex justify="center" align="center" p={2}>
+              <Microlink style={{ width: "100%", maxWidth: "50vw" }} url={post.link} />
+            </Flex>
+          ) : null}
           {post.mediaURL ? (
             <Flex justify="center" align="center" p={2}>
               {post.mediaType === "video" ? (
