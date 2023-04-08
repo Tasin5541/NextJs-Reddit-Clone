@@ -16,7 +16,7 @@ A reddit clone made NextJs 13
 
 ## Live Demo
 
-See a [live demo](https:) on Vercel
+See a [live demo](https://next-js-reddit-clone-tasin5541.vercel.app/) on Vercel
 
 ## Installation
 
