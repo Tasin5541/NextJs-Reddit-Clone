@@ -1,0 +1,7 @@
+{
+  "importOrder": ["^[react*]", "^@mui/(.*)$", "<THIRD_PARTY_MODULES>", "^[./]", "^[../]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderCaseInsensitive": true,
+  "printWidth": 180
+}
