@@ -3,7 +3,7 @@
 A reddit clone made NextJs 13
 
 <p align="center"> 
-    <img src="public/images/nextjs-reddit-clone.png" align="center"></img>
+    <img src="public/images/guides/nextjs-reddit-clone.gif" align="center"></img>
 </p>
 
 - **[NextJs](https://nextjs.org/)** (13.x)
