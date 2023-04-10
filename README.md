@@ -2,7 +2,7 @@
 
 <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTasin5541%2FNextJs-Reddit-Clone&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 
-A reddit clone made NextJs 13, Firebase, Chakra UI, Recoil
+A reddit clone made with NextJs 13, Firebase, Chakra UI, Recoil
 
 <p align="center"> 
     <img src="public/images/guides/nextjs-reddit-clone.gif" align="center"></img>
