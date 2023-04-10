@@ -41,7 +41,7 @@ See a [live demo](https://next-js-reddit-clone-tasin5541.vercel.app/) on Vercel
 4. Click the `App nickname` field.<br>
    Type `your-app-name`<br>
    Click `Register app`<br>
-   Copy and store the `firebaseConfig` values
+   Copy and store the `firebaseConfig` values<br>
    Click `Continue to console`<br>
    <img src="public/images/guides/fstep4.webp" style="width: 800px;">
 
