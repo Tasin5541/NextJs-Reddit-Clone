@@ -74,7 +74,7 @@ const Posts: FC<PostsProps> = ({ communityData, userId, loadingUser }) => {
   }, [communityData, postStateValue.postUpdateRequired]);
 
   const getPosts = async () => {
-    console.log("WE ARE GETTING POSTS!!!");
+    // console.log("WE ARE GETTING POSTS!!!");
 
     setLoading(true);
     try {
@@ -91,12 +91,12 @@ const Posts: FC<PostsProps> = ({ communityData, userId, loadingUser }) => {
         postUpdateRequired: false,
       }));
     } catch (error: any) {
-      console.log("getPosts error", error.message);
+      // console.log("getPosts error", error.message);
     }
     setLoading(false);
   };
 
-  console.log("HERE IS POST STATE", postStateValue);
+  // console.log("HERE IS POST STATE", postStateValue);
 
   return (
     <>

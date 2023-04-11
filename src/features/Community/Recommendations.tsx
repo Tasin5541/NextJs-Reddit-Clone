@@ -25,11 +25,11 @@ const Recommendations: FC<RecommendationsProps> = () => {
         id: doc.id,
         ...doc.data(),
       })) as Community[];
-      console.log("HERE ARE COMS", communities);
+      // console.log("HERE ARE COMS", communities);
 
       setCommunities(communities);
     } catch (error: any) {
-      console.log("getCommunityRecommendations error", error.message);
+      // console.log("getCommunityRecommendations error", error.message);
     }
     setLoading(false);
   };

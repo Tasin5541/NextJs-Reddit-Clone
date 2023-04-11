@@ -24,7 +24,7 @@ const usePosts = (communityData?: Community) => {
   const communityStateValue = useRecoilValue(communityState);
 
   const onSelectPost = (post: Post, postIdx: number) => {
-    console.log("HERE IS STUFF", post, postIdx);
+    // console.log("HERE IS STUFF", post, postIdx);
 
     setPostStateValue((prev) => ({
       ...prev,
@@ -71,7 +71,7 @@ const usePosts = (communityData?: Community) => {
           voteValue: vote,
         };
 
-        console.log("NEW VOTE!!!", newVote);
+        // console.log("NEW VOTE!!!", newVote);
 
         batch.set(postVoteRef, newVote);
 
@@ -143,12 +143,12 @@ const usePosts = (communityData?: Community) => {
       batch.update(postRef, { voteStatus: voteStatus + voteChange });
       await batch.commit();
     } catch (error) {
-      console.log("onVote error", error);
+      // console.log("onVote error", error);
     }
   };
 
   const onDeletePost = async (post: Post): Promise<boolean> => {
-    console.log("DELETING POST: ", post.id);
+    // console.log("DELETING POST: ", post.id);
 
     try {
       // if post has an image url, delete it from storage
@@ -177,7 +177,7 @@ const usePosts = (communityData?: Community) => {
        */
       return true;
     } catch (error) {
-      console.log("THERE WAS AN ERROR", error);
+      // console.log("THERE WAS AN ERROR", error);
       return false;
     }
   };
@@ -195,7 +195,7 @@ const usePosts = (communityData?: Community) => {
         postVotes: postVotes as PostVote[],
       }));
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
 
     // const unsubscribe = onSnapshot(postVotesQuery, (querySnapshot) => {

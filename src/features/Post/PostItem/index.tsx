@@ -37,12 +37,12 @@ const PostItem: FC<PostItemContentProps> = ({ post, postIdx, onVote, onSelectPos
       const success = await onDeletePost(post);
       if (!success) throw new Error("Failed to delete post");
 
-      console.log("Post successfully deleted");
+      // console.log("Post successfully deleted");
 
       // Could proably move this logic to onDeletePost function
       if (router) router.back();
     } catch (error: any) {
-      console.log("Error deleting post", error.message);
+      // console.log("Error deleting post", error.message);
       /**
        * Don't need to setLoading false if no error
        * as item will be removed from DOM

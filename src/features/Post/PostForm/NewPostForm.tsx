@@ -82,7 +82,7 @@ const NewPostForm: FC<NewPostFormProps> = ({ communityId, communityImageURL, use
         editedAt: serverTimestamp(),
       });
 
-      console.log("HERE IS NEW POST ID", postDocRef.id);
+      // console.log("HERE IS NEW POST ID", postDocRef.id);
 
       // check if selectedFile exists, if it does, do image processing
       if (selectedTab === "Images & Video" && selectedFile) {
@@ -94,7 +94,7 @@ const NewPostForm: FC<NewPostFormProps> = ({ communityId, communityImageURL, use
           mediaURL: downloadURL,
           mediaType,
         });
-        console.log("HERE IS DOWNLOAD URL", downloadURL);
+        // console.log("HERE IS DOWNLOAD URL", downloadURL);
       }
 
       // Clear the cache to cause a refetch of the posts
@@ -104,7 +104,7 @@ const NewPostForm: FC<NewPostFormProps> = ({ communityId, communityImageURL, use
       }));
       router.back();
     } catch (error) {
-      console.log("createPost error", error);
+      // console.log("createPost error", error);
       setError("Error creating post");
     }
     setLoading(false);

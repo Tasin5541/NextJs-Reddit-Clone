@@ -41,7 +41,7 @@ const Login: FC<LoginProps> = ({ toggleView }) => {
   };
 
   useEffect(() => {
-    console.log(userCred);
+    // console.log(userCred);
     if (userCred) {
       CreateUpdateUser(userCred.user);
     }

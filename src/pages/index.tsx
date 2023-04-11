@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   const communityStateValue = useRecoilValue(communityState);
 
   const getUserHomePosts = async () => {
-    console.log("GETTING USER FEED");
+    // console.log("GETTING USER FEED");
     setLoading(true);
     try {
       /**
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
 
       // User has joined communities
       if (communityStateValue.mySnippets.length) {
-        console.log("GETTING POSTS IN USER COMMUNITIES");
+        // console.log("GETTING POSTS IN USER COMMUNITIES");
 
         const myCommunityIds = communityStateValue.mySnippets.map((snippet) => snippet.communityId);
         queryConstraints.push(where("communityId", "in", myCommunityIds));
@@ -52,20 +52,20 @@ const Home: NextPage = () => {
       })) as Post[];
       feedPosts.push(...posts);
 
-      console.log("HERE ARE FEED POSTS", feedPosts);
+      // console.log("HERE ARE FEED POSTS", feedPosts);
 
       setPostStateValue((prev) => ({
         ...prev,
         posts: feedPosts,
       }));
     } catch (error: any) {
-      console.log("getUserHomePosts error", error.message);
+      // console.log("getUserHomePosts error", error.message);
     }
     setLoading(false);
   };
 
   const getNoUserHomePosts = async () => {
-    console.log("GETTING NO USER FEED");
+    // console.log("GETTING NO USER FEED");
     setLoading(true);
     try {
       const postQuery = query(collection(firestore, "posts"), orderBy("voteStatus", "desc"), limit(10));
@@ -74,14 +74,14 @@ const Home: NextPage = () => {
         id: doc.id,
         ...doc.data(),
       }));
-      console.log("NO USER FEED", posts);
+      // console.log("NO USER FEED", posts);
 
       setPostStateValue((prev) => ({
         ...prev,
         posts: posts as Post[],
       }));
     } catch (error: any) {
-      console.log("getNoUserHomePosts error", error.message);
+      // console.log("getNoUserHomePosts error", error.message);
     }
     setLoading(false);
   };

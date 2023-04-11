@@ -37,14 +37,14 @@ const useCommunityData = (ssrCommunityData?: boolean) => {
       }));
       setLoading(false);
     } catch (error: any) {
-      console.log("Error getting user snippets", error);
+      // console.log("Error getting user snippets", error);
       setError(error.message);
     }
     setLoading(false);
   };
 
   const getCommunityData = async (communityId: string) => {
-    console.log("GETTING COMMUNITY DATA");
+    // console.log("GETTING COMMUNITY DATA");
 
     try {
       const communityDocRef = doc(firestore, "communities", communityId as string);
@@ -57,13 +57,13 @@ const useCommunityData = (ssrCommunityData?: boolean) => {
         } as Community,
       }));
     } catch (error: any) {
-      console.log("getCommunityData error", error.message);
+      // console.log("getCommunityData error", error.message);
     }
     setLoading(false);
   };
 
   const onJoinLeaveCommunity = (community: Community, isJoined?: boolean) => {
-    console.log("ON JOIN LEAVE", community.id);
+    // console.log("ON JOIN LEAVE", community.id);
 
     if (!user) {
       setAuthModalState({ open: true, view: "login" });
@@ -79,7 +79,7 @@ const useCommunityData = (ssrCommunityData?: boolean) => {
   };
 
   const joinCommunity = async (community: Community) => {
-    console.log("JOINING COMMUNITY: ", community.id);
+    // console.log("JOINING COMMUNITY: ", community.id);
     try {
       const batch = writeBatch(firestore);
 
@@ -109,7 +109,7 @@ const useCommunityData = (ssrCommunityData?: boolean) => {
         mySnippets: [...prev.mySnippets, newSnippet],
       }));
     } catch (error) {
-      console.log("joinCommunity error", error);
+      // console.log("joinCommunity error", error);
     }
     setLoading(false);
   };
@@ -131,7 +131,7 @@ const useCommunityData = (ssrCommunityData?: boolean) => {
         mySnippets: prev.mySnippets.filter((item) => item.communityId !== communityId),
       }));
     } catch (error) {
-      console.log("leaveCommunity error", error);
+      // console.log("leaveCommunity error", error);
     }
     setLoading(false);
   };

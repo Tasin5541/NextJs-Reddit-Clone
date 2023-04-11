@@ -86,7 +86,7 @@ const Comments: FC<CommentsProps> = ({ user, selectedPost, community }) => {
         postUpdateRequired: true,
       }));
     } catch (error: any) {
-      console.log("onCreateComment error", error.message);
+      // console.log("onCreateComment error", error.message);
     }
     setCommentCreateLoading(false);
   };
@@ -118,7 +118,7 @@ const Comments: FC<CommentsProps> = ({ user, selectedPost, community }) => {
         setComments((prev) => prev.filter((item) => item.id !== comment.id));
         // return true;
       } catch (error: any) {
-        console.log("Error deletig comment", error.message);
+        // console.log("Error deletig comment", error.message);
         // return false;
       }
       setDeleteLoading("");
@@ -136,13 +136,13 @@ const Comments: FC<CommentsProps> = ({ user, selectedPost, community }) => {
       }));
       setComments(comments as Comment[]);
     } catch (error: any) {
-      console.log("getPostComments error", error.message);
+      // console.log("getPostComments error", error.message);
     }
     setCommentFetchLoading(false);
   };
 
   useEffect(() => {
-    console.log("HERE IS SELECTED POST", selectedPost.id);
+    // console.log("HERE IS SELECTED POST", selectedPost.id);
 
     getPostComments();
     // eslint-disable-next-line react-hooks/exhaustive-deps

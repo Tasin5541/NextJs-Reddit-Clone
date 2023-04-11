@@ -26,7 +26,7 @@ const PostPage: FC<PostPageProps> = () => {
   const { postStateValue, setPostStateValue, onDeletePost, loading, setLoading, onVote } = usePosts(communityStateValue.currentCommunity);
 
   const fetchPost = async () => {
-    console.log("FETCHING POST");
+    // console.log("FETCHING POST");
 
     setLoading(true);
     try {
@@ -37,7 +37,7 @@ const PostPage: FC<PostPageProps> = () => {
         selectedPost: { id: postDoc.id, ...postDoc.data() } as Post,
       }));
     } catch (error: any) {
-      console.log("fetchPost error", error.message);
+      // console.log("fetchPost error", error.message);
     }
     setLoading(false);
   };

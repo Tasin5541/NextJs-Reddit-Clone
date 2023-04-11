@@ -93,7 +93,7 @@ const CreateCommunityModal: FC<CreateCommunityModalProps> = ({ userId }) => {
         });
       });
     } catch (error: any) {
-      console.log("Transaction error", error);
+      // console.log("Transaction error", error);
       setNameError(error.message);
     }
     setSnippetState((prev) => ({
